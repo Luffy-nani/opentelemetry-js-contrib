@@ -61,7 +61,9 @@ describe('ExpressInstrumentation', () => {
 
     afterEach(() => {
       server.close();
-      instrumentation.setConfig({ ignoreLayersType: [ExpressLayerType.MIDDLEWARE] });
+      instrumentation.setConfig({
+        ignoreLayersType: [ExpressLayerType.MIDDLEWARE],
+      });
     });
 
     it('should ignore specific middlewares based on config', async () => {
